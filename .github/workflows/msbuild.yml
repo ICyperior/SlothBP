@@ -23,13 +23,12 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: x64_${{ steps.current-time.outputs.formattedTime }}_TrafficMonitor
+        name: x64_${{ steps.current-time.outputs.formattedTime }}_SlothBP
         path: |
-          Bin/x64/Release/TrafficMonitor.exe
-          Bin/x64/Release/*.dll
+          Bin/x64/Release/*
 
     - name : Upload pdb files
       uses: actions/upload-artifact@v3
       with:
         name: x64_${{ steps.current-time.outputs.formattedTime }}_pdb
-        path: Bin/x64/Release/*.pdb
+        path: Bin/x64/Release/*.
