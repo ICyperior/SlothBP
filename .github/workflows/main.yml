@@ -57,10 +57,10 @@ jobs:
       with:
         name: x86_${{ steps.current-time.outputs.formattedTime }}_SlothBP
         path: |
-          Bin/x86/*.dp32
+          Bin/x32/*.dp32
 
     - name : Upload lib files
       uses: actions/upload-artifact@v3
       with:
         name: x86_${{ steps.current-time.outputs.formattedTime }}_lib
-        path: Bin/x86/*.lib
+        path: Bin/x32/*.lib
